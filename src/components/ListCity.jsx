@@ -1,6 +1,3 @@
-import '../styles/weather.css';
-
-
 const ListCity = ({ listCity, setCity }) => {
   return (
     <div className="container div-list-city">

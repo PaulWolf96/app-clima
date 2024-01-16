@@ -4,10 +4,8 @@ const Weather = ({ city }) => {
 
   const API_KEY = '3bc5f4b90b8c37e62b1e7a15a33e6435';
   const [currentCityTemperature, setCurrentCityTemperature] = useState(null);
-
   //obtengo las coordenas de la ciudad seleccionada
   const { lat, lon } = city;
-
 
   useEffect(() => {
     if(city) {
@@ -30,25 +28,18 @@ const Weather = ({ city }) => {
 
 
 
-
-
   return (
-    <div className="container">
-      {currentCityTemperature &&
-
+      currentCityTemperature &&
         (
-          <div>
+          <div className="div-weather">
             <h1>{`${Math.round(currentCityTemperature.main.temp)}°C`}</h1>
             <p>Max:{`${Math.round(currentCityTemperature.main.temp_max)}°C`}</p>
             <p>Min:{`${Math.round(currentCityTemperature.main.temp_min)}°C`}</p>
             <h6>{currentCityTemperature.name}</h6>
             <h5>{currentCityTemperature.weather[0].description}</h5>
-            <img src={`https://openweathermap.org/img/wn/${currentCityTemperature.weather[0].icon}@2x.png`} alt="icono del clima" />
+            <img src={`https://openweathermap.org/img/wn/${currentCityTemperature.weather[0].icon}@2x.png`} width="100px" alt="icono del clima" />
           </div>
         )
-
-      }
-    </div>
   )
 }
 
