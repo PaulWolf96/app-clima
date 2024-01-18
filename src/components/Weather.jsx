@@ -18,9 +18,8 @@ const Weather = () => {
             throw new Error('Error al obtener la ciudad');
           }
           const data = await response.json();
-          setCurrentCityTemperature(data);
           getClassBackground(data.weather[0].main);
-          console.log(data);
+          setCurrentCityTemperature(data);
         } catch (error) {
           console.error(error)
         }
