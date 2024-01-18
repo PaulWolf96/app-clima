@@ -9,9 +9,6 @@ function App() {
 
   const { city, backgroundWeather } = useWeatherContext();
 
- 
-
-
   return (
     <div className={`container-fluid ${backgroundWeather}` }>
       <div className='col col-4'>

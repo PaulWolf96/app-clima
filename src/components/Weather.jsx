@@ -5,7 +5,6 @@ const Weather = () => {
 
   const {API_KEY_WEATHER, API_KEY_TIMEZONE, city, currentCityTemperature, setCurrentCityTemperature, getClassBackground } = useWeatherContext();
   const [localTime, setLocalTime] = useState(null);
-  //obtengo las coordenas de la ciudad seleccionada
   const { lat, lon } = city;
 
 
