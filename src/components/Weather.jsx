@@ -30,11 +30,10 @@ const Weather = ({ city }) => {
           if(!response.ok) {
             throw new Error('Error al obtener la hora local');
           }
-          const data = await response.json();
-          const separarString = data.formatted.split(" ")[1];
-          const getHour = separarString.split(":");
-          const hourFormatted =  `${getHour[0]}:${getHour[1]}` 
-          setLocalTime(hourFormatted);
+          const { formatted } = await response.json();
+          const getHour = new Date(formatted).toLocaleTimeString().split(":");
+          const hour = `${getHour[0]}:${getHour[1]}`;
+          setLocalTime(hour);
         } catch (error) {
           console.error(error);
         }
