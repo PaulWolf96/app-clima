@@ -1,34 +1,32 @@
 import './App.css'
-import { useState } from 'react';
 import Form from './components/Form'
 import ListCity from './components/ListCity';
 import Weather from './components/Weather';
 import LogoClimapp from './assets/logoClimapp.png';
+import { useWeatherContext } from './context/WeatherContext';
 
 function App() {
 
-  const [listCity, setListCity] = useState([]);
-  const [city, setCity] = useState('');
+  const { city, backgroundWeather } = useWeatherContext();
+
+ 
 
 
   return (
-    <div className='container-fluid'>
+    <div className={`container-fluid ${backgroundWeather}` }>
       <div className='col col-4'>
         <div className='div-logo'><img src={LogoClimapp} alt="logo climapp" className='logo-climapp' /></div>
-        <Form setListCity={setListCity} />
-        <ListCity
-          listCity={listCity}
-          setCity={setCity}
-        />
+        <Form />
+        <ListCity />
       </div>
 
       {
         city && 
         <div className='col col-7'>
-          <Weather city={city} />
+          <Weather />
         </div>
       }
-      
+
     </div>
   )
 }

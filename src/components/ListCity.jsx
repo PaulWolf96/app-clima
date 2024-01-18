@@ -1,4 +1,9 @@
-const ListCity = ({ listCity, setCity }) => {
+import { useWeatherContext } from "../context/WeatherContext"
+
+const ListCity = () => {
+
+  const {listCity, setCity} = useWeatherContext();
+
   return (
     <div className="container div-list-city">
       {

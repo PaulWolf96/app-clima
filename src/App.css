@@ -4,17 +4,33 @@
   padding: 0;
 }
 
-body {
-  background-image: url('./assets/nubes.jpg');
-  background-size: cover;
-}
-
 .container-fluid {
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 100vh;
   width: 100%;
+}
+
+.background-clouds {
+  background-image: url('./assets/nubes.jpg');
+}
+
+.background-clear {
+  background-image: url('./assets/despejado.jpg');
+}
+
+.background-rain {
+  background-image: url('./assets/lluvia.jpg');
+}
+
+.background-thunderstorm {
+  background-image: url('./assets/tormenta.jpg');
+}
+
+.background-snow {
+  background-image: url('./assets/nieve.jpg');
 }
 
 .col-4 {
