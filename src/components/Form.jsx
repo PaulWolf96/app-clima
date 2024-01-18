@@ -30,7 +30,7 @@ const Form = ({ setListCity }) => {
     <div className='container'>
       <form className="form" onSubmit={(e) => e.preventDefault()}>
         <label className="form-label" htmlFor="formSearch">Buscar una ciudad</label>
-        <input className="form-control" type="text" placeholder="Buscar..." id="formSearch" value={input}
+        <input className="form-control" type="text" placeholder="Ej. Buenos Aires" id="formSearch" value={input}
           onChange={(e) => setInput(e.target.value)} />
       </form>
     </div>

@@ -21,9 +21,14 @@ function App() {
           setCity={setCity}
         />
       </div>
-      <div className='col col-7'>
-        <Weather city={city} />
-      </div>
+
+      {
+        city && 
+        <div className='col col-7'>
+          <Weather city={city} />
+        </div>
+      }
+      
     </div>
   )
 }
