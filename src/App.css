@@ -99,3 +99,21 @@
   display: flex;
   flex-direction: column;
 }
+
+
+@media (width < 900px) {
+  .container-fluid {
+    height: 1000px;
+    flex-direction: column;
+  }
+
+  .col-4 {
+    width: 90% !important;
+  }
+
+  .col-7 {
+    width: 90% !important;
+    height: 300px;
+  }
+
+}
